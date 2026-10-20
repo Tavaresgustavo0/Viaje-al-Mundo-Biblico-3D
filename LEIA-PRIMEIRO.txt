@@ -1,0 +1,11 @@
+ENVIO AO GITHUB
+
+1. Abra seu repositorio no GitHub: Add file > Upload files.
+2. Abra lote-01 no computador e arraste somente os ARQUIVOS de dentro para o GitHub. Clique Commit changes.
+3. Repita com os arquivos de cada lote seguinte, no MESMO repositorio.
+4. Todos os arquivos devem ficar na raiz, incluindo index.html e vercel.json.
+NAO envie as pastas lote-XX, este TXT, o projeto inteiro ou o ZIP.
+5. Na Vercel importe esse repositorio: Framework Other, Root Directory raiz, Build Command vazio, Output Directory ponto (.).
+6. Clique Deploy somente depois de enviar todos os lotes.
+
+4 lotes; 36 arquivos do site.
