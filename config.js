@@ -1,11 +1,11 @@
 // Configure your own hosted payment page before launching sales.
 window.BIBLICAL_STORE = {
-  price: 16.99,
-  currency: 'EUR',
+  price: 19.90,
+  currency: 'USD',
   checkoutUrl: '',
   plans: {
     basic: { price: 9.90, checkoutUrl: '' },
-    premium: { price: 16.99, checkoutUrl: '' },
+    premium: { price: 19.90, checkoutUrl: '' },
     premiumSpecial: { price: 15.90, checkoutUrl: '' }
   },
   supportEmail: '',

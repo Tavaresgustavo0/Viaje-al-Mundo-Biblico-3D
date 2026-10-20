@@ -1,0 +1,66 @@
+/* Loaded last so the phone layout takes precedence over the original theme. */
+html{-webkit-text-size-adjust:100%;scroll-padding-top:20px}
+img,video{max-width:100%}
+img{height:auto}
+button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.plans-grid>*,.benefit-item>*,.content-visual-grid>*,.tomo-row>*,.bono-row>*{min-width:0}
+.preview-dots,.uso-dots{flex-wrap:wrap;gap:0}
+.preview-dots .preview-dot,.uso-dots .uso-dot{position:relative;width:44px;height:44px;min-width:44px;min-height:44px;border-radius:0;background:transparent;transform:none}
+.preview-dot:before,.uso-dot:before{content:'';position:absolute;inset:18px;border-radius:50%;background:#ffffff40}
+.preview-dot.is-active:before,.uso-dot.is-active:before{background:#ddbd7b}
+.upgrade-close,.purchase-toast-close{width:44px;height:44px;min-width:44px;min-height:44px}
+.upgrade-close{top:4px;right:4px;background:#17232f;border-radius:50%;z-index:1}
+.upgrade-dialog{overscroll-behavior:contain;scrollbar-gutter:stable;max-height:calc(100vh - 24px);max-height:calc(100dvh - 24px)}
+.upgrade-decline{padding:12px 4px;font-size:14px;line-height:1.6}
+@media(max-width:760px){
+  body{font-size:16px;line-height:1.65}
+  .hero{padding:28px 18px 34px}
+  .hero-kicker{font-size:10px;line-height:1.6;letter-spacing:.06em;padding:7px 10px;margin-bottom:16px;border-radius:12px}
+  .hero h1{font-size:clamp(30px,8.6vw,44px);line-height:1.13;margin-bottom:16px}
+  .hero-sub{font-size:16px;line-height:1.65;margin-bottom:20px}
+  .hero-img-wrap{max-width:420px;margin-bottom:18px}
+  .hero-pills{gap:6px;letter-spacing:0}
+  .hero-pills .div{display:none}
+  .hero-pills span:not(.div){font-size:11px;padding:7px 9px}
+  .hero .btn-pulse,.btn-pulse{min-height:52px;font-size:15px;line-height:1.5;padding:16px;width:100%;text-align:center;display:block}
+  .hero-social,.hero-trust{font-size:12px;line-height:1.7}
+  .stats-sec,.prob-sec,.solucion-sec,.dentro-sec,.benefits-sec,.recibis-sec,.bonos-sec,.compra-sec,.tests-sec,.uso-sec,.faq-sec,.cta-final-sec,.visual-system-sec{padding:36px 16px}
+  .stats-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .stat-counter-card{min-height:132px;padding:16px 10px}
+  .stat-lbl{font-size:13px;line-height:1.5}
+  .content-visual-body p,.benefit-item p,.prob-txt,.test-quote,.faq-resp,.inc-lista li{font-size:15px;line-height:1.75}
+  .visual-system-tags{grid-template-columns:1fr!important;gap:10px}
+  .visual-system-tag{min-height:60px;padding:12px 14px!important}
+  .app-quick-badges{gap:8px}
+  .app-quick-badges span{padding:10px;font-size:12px;line-height:1.5}
+  .tomo-row,.bono-row,.audience-row{gap:12px;padding:14px 12px}
+  .plans-grid{grid-template-columns:minmax(0,1fr);gap:20px;margin-top:24px}
+  .basic-plan{position:static}
+  .plans-grid .price-card{padding:24px 18px}
+  .price-card-badge{position:static;display:block;max-width:100%;white-space:normal;line-height:1.6;margin:0 0 18px;transform:none;font-size:11px}
+  .price-card h3{font-size:24px;line-height:1.25;margin-top:12px}
+  .price-big{font-size:clamp(42px,12vw,56px);line-height:1.2;white-space:normal}
+  .price-sub,.basic-plan-note{font-size:15px;line-height:1.65}
+  .inc-lista{margin:22px 0}
+  .faq-btn{font-size:16px;min-height:56px;padding:18px 16px;text-align:left;gap:14px}
+  .preview-arrow,.uso-btn{width:48px;height:48px;min-width:48px}
+  .preview-arrow{top:auto;bottom:0;transform:none}
+  .preview-arrow:active{transform:scale(.96)}
+  .preview-stage{padding-bottom:54px}
+  .preview-stage:before,.preview-stage:after{pointer-events:none;width:16px}
+  .preview-viewport{padding-top:10px;padding-bottom:20px}
+  .upgrade-dialog{padding:44px 20px 24px;width:calc(100% - 24px);border-radius:16px}
+  .upgrade-dialog h2{font-size:25px}
+  .upgrade-price{flex-wrap:wrap;gap:8px 14px}
+  .upgrade-price strong{font-size:40px}
+  .upgrade-accept{font-size:15px}
+  .offer-stock-head,.offer-stock-footer{flex-wrap:wrap}
+  .purchase-toast{left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));max-width:none;padding:14px 48px 14px 12px;gap:10px;pointer-events:none}
+  .purchase-toast-close{pointer-events:auto;top:0;right:0}
+  .purchase-toast-icon.purchase-toast-avatar{width:36px;height:36px;min-width:36px}
+  .purchase-toast strong{font-size:13px}
+  .purchase-toast p{font-size:12px;line-height:1.4}
+  .europe-footer{padding:20px 16px;font-size:14px}
+  .europe-footer a{display:inline-block;padding:10px 4px}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}html,.uso-track,.preview-viewport{scroll-behavior:auto!important}}

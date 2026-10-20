@@ -1,0 +1,12 @@
+node_modules/
+dist/
+publicar-vercel/
+publicar-vercel.zip
+enviar-github/
+atualizar-github/
+publication-before.json
+.vercel/
+.env
+.env.*
+!.env.example
+*.log
