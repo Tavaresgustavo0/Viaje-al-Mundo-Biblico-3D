@@ -14,6 +14,11 @@ function openFaq(btn){
   var video=document.getElementById('mb-app-demo-video');
   if(!video)return;
   video.muted=true; video.defaultMuted=true;
+  // On phones, let visitors choose when to spend data and play the demo.
+  if(window.matchMedia('(max-width:760px), (prefers-reduced-motion: reduce)').matches || navigator.connection?.saveData){
+    video.controls=true;video.removeAttribute('tabindex');video.style.pointerEvents='auto';
+    return;
+  }
   var isInView=false;
   function pauseVideo(){ if(!video.paused)video.pause(); }
   function playVideo(){
@@ -42,7 +47,7 @@ function openFaq(btn){
   if(!track||!prev||!next)return;
   var slides=[].slice.call(track.querySelectorAll('.uso-slide'));
   if(!slides.length)return;
-  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce), (max-width:760px)').matches;
   var timer=null, resume=null, inView=false, current=0;
   function paso(){
     var a=slides[0].getBoundingClientRect();
@@ -102,7 +107,7 @@ function openFaq(btn){
 (function(){
   var nums=[].slice.call(document.querySelectorAll('.counter-num'));
   if(!nums.length)return;
-  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce), (max-width:760px)').matches;
   function animate(el){
     if(el.dataset.done==='1')return;
     el.dataset.done='1';
@@ -139,7 +144,7 @@ function openFaq(btn){
   if(!viewport||!track||!slides.length||!prev||!next||!dotsWrap||!stage)return;
 
   var reduce=window.matchMedia &&
-    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.matchMedia('(prefers-reduced-motion: reduce), (max-width:760px)').matches;
 
   var current=0;
   var timer=null;
@@ -326,7 +331,7 @@ function openFaq(btn){
  const config=window.BIBLICAL_STORE;
  const price=new Intl.NumberFormat('es-ES',{style:'currency',currency:config.currency}).format(config.price);
  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
- let node;while(node=walker.nextNode()) {if(node.parentElement.closest('script,style'))continue;if(node.textContent.includes('€16.99'))node.textContent=node.textContent.replaceAll('€16.99',price);if(node.textContent.trim()==='€34.00')node.parentElement.hidden=true;}
+ let node;while(node=walker.nextNode()) {if(node.parentElement.closest('script,style'))continue;if(node.textContent.includes('US$ 19,90'))node.textContent=node.textContent.replaceAll('US$ 19,90',price);if(node.textContent.trim()==='US$ 34,00')node.parentElement.hidden=true;}
  document.querySelectorAll('.btn-pulse,[data-checkout],[data-mb-buy]').forEach(link => {
    const destination=link.closest('#oferta')?'checkout.html':'#comprar';
    if(link.tagName==='A')link.href=destination;
@@ -335,7 +340,7 @@ function openFaq(btn){
  document.querySelectorAll('.faq-btn').forEach(button=>button.setAttribute('aria-expanded','false'));
  // The download captured carousel dots; scripts generate fresh functional dots.
  const footer=document.createElement('div');footer.className='europe-footer';
- const note=document.createElement('p');note.textContent='Contenido digital · Importe en euros · Sin entrega física';footer.append(note);
+ const note=document.createElement('p');note.textContent='Contenido digital · Importe en dólares estadounidenses · Sin entrega física';footer.append(note);
  for(const [label,url] of [['Condiciones de compra',config.termsUrl],['Política de privacidad',config.privacyUrl],['Contacto',config.supportEmail?'mailto:'+config.supportEmail:'']]) {if(!url)continue;const a=document.createElement('a');a.textContent=label;a.href=url;footer.append(a);}
  if(config.sellerName){const p=document.createElement('p');p.textContent=config.sellerName;footer.append(p);}
  document.body.append(footer);
