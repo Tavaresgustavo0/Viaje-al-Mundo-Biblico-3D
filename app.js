@@ -439,7 +439,7 @@ function openFaq(btn){
  const toast=document.createElement('aside');toast.className='purchase-toast';toast.setAttribute('aria-live','polite');toast.setAttribute('aria-atomic','true');toast.hidden=true;
  const icon=document.createElement('div');icon.className='purchase-toast-icon';icon.setAttribute('aria-hidden','true');
  const body=document.createElement('div'),label=document.createElement('small'),person=document.createElement('strong'),product=document.createElement('p'),time=document.createElement('span'),close=document.createElement('button');
- label.textContent=demo?'COMPRA RECIENTE';product.textContent='Ha adquirido la colección Viaje al Mundo Bíblico 3D';close.type='button';close.className='purchase-toast-close';close.textContent='×';close.setAttribute('aria-label','Cerrar los avisos de compra');body.append(label,person,product,time);toast.append(icon,body,close);document.body.append(toast);
+ label.textContent=demo?'COMPRA RECIENTE':null;product.textContent='Ha adquirido la colección Viaje al Mundo Bíblico 3D';close.type='button';close.className='purchase-toast-close';close.textContent='×';close.setAttribute('aria-label','Cerrar los avisos de compra');body.append(label,person,product,time);toast.append(icon,body,close);document.body.append(toast);
  let pending,hideTimer,stopped=false,last=-1;
  close.addEventListener('click',()=>{stopped=true;clearTimeout(pending);clearTimeout(hideTimer);toast.hidden=true;});
  const random=(min,max)=>Math.floor(min+Math.random()*(max-min+1));
