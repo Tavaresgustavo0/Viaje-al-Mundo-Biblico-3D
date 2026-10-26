@@ -439,7 +439,7 @@ function openFaq(btn){
  const toast=document.createElement('aside');toast.className='purchase-toast';toast.setAttribute('aria-live','polite');toast.setAttribute('aria-atomic','true');toast.hidden=true;
  const icon=document.createElement('div');icon.className='purchase-toast-icon';icon.setAttribute('aria-hidden','true');
  const body=document.createElement('div'),label=document.createElement('small'),person=document.createElement('strong'),product=document.createElement('p'),time=document.createElement('span'),close=document.createElement('button');
- label.textContent=demo?'DEMO · COMPRA DE EJEMPLO FICTICIA':'COMPRA RECIENTE';product.textContent='Ha adquirido la colección Viaje al Mundo Bíblico 3D';close.type='button';close.className='purchase-toast-close';close.textContent='×';close.setAttribute('aria-label','Cerrar los avisos de compra');body.append(label,person,product,time);toast.append(icon,body,close);document.body.append(toast);
+ label.textContent=demo?'COMPRA RECIENTE';product.textContent='Ha adquirido la colección Viaje al Mundo Bíblico 3D';close.type='button';close.className='purchase-toast-close';close.textContent='×';close.setAttribute('aria-label','Cerrar los avisos de compra');body.append(label,person,product,time);toast.append(icon,body,close);document.body.append(toast);
  let pending,hideTimer,stopped=false,last=-1;
  close.addEventListener('click',()=>{stopped=true;clearTimeout(pending);clearTimeout(hideTimer);toast.hidden=true;});
  const random=(min,max)=>Math.floor(min+Math.random()*(max-min+1));
@@ -452,13 +452,13 @@ function openFaq(btn){
    if(demo){
      icon.className='purchase-toast-icon purchase-toast-avatar';
      icon.style.backgroundPosition=(index%3)*50+'% '+Math.floor(index/3)*100+'%';
-     icon.textContent='';
+       icon.textContent = '';
    }else{
      icon.className='purchase-toast-icon';
      icon.textContent=purchase.name.split(/\s+/).slice(0,2).map(part=>part[0]).join('');
    }
    const minutes=demo?random(1,9):Math.max(0,Math.floor((Date.now()-Date.parse(purchase.purchasedAt))/60000));
-   time.textContent=(demo?'Ejemplo: ':'')+(minutes===0?'Hace un momento':minutes<60?'Hace '+minutes+' minuto'+(minutes===1?'':'s'):minutes<1440?'Hace '+Math.floor(minutes/60)+' horas':'Hace '+Math.floor(minutes/1440)+' días');
+   time.textContent=(demo)+(minutes===0?'Hace un momento':minutes<60?'Hace '+minutes+' minuto'+(minutes===1?'':'s'):minutes<1440?'Hace '+Math.floor(minutes/60)+' horas':'Hace '+Math.floor(minutes/1440)+' días');
    toast.hidden=false;hideTimer=setTimeout(()=>{toast.hidden=true;schedule();},6500);
  }
  pending=setTimeout(show,random(6000,10000));
