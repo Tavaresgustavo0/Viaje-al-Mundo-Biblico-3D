@@ -1,12 +1,12 @@
-// Configure your own hosted payment page before launching sales.
+// Hotmart checkout destinations for each plan.
 window.BIBLICAL_STORE = {
   price: 19.90,
   currency: 'USD',
-  checkoutUrl: '',
+  checkoutUrl: 'https://hotmart.com/es/marketplace/productos/viaje-al-mundo-biblico-3d-premium/C108120733U',
   plans: {
-    basic: { price: 9.90, checkoutUrl: '' },
-    premium: { price: 19.90, checkoutUrl: '' },
-    premiumSpecial: { price: 15.90, checkoutUrl: '' }
+    basic: { price: 9.90, checkoutUrl: 'https://hotmart.com/es/marketplace/productos/viaje-al-mundo-biblico-3d-basico/Q108120688N' },
+    premium: { price: 19.90, checkoutUrl: 'https://hotmart.com/es/marketplace/productos/viaje-al-mundo-biblico-3d-premium/C108120733U' },
+    premiumSpecial: { price: 15.90, checkoutUrl: 'https://hotmart.com/es/marketplace/productos/viaje-al-mundo-biblico-3d-premium-descuento/Q108120773T' }
   },
   supportEmail: '',
   sellerName: '',
