@@ -458,7 +458,7 @@ function openFaq(btn){
      icon.textContent=purchase.name.split(/\s+/).slice(0,2).map(part=>part[0]).join('');
    }
    const minutes=demo?random(1,9):Math.max(0,Math.floor((Date.now()-Date.parse(purchase.purchasedAt))/60000));
-   time.textContent=(demo)+(minutes===0?'Hace un momento':minutes<60?'Hace '+minutes+' minuto'+(minutes===1?'':'s'):minutes<1440?'Hace '+Math.floor(minutes/60)+' horas':'Hace '+Math.floor(minutes/1440)+' días');
+   time.textContent=(minutes===0?'Hace un momento':minutes<60?'Hace '+minutes+' minuto'+(minutes===1?'':'s'):minutes<1440?'Hace '+Math.floor(minutes/60)+' horas':'Hace '+Math.floor(minutes/1440)+' días');
    toast.hidden=false;hideTimer=setTimeout(()=>{toast.hidden=true;schedule();},6500);
  }
  pending=setTimeout(show,random(6000,10000));
