@@ -1153,6 +1153,9 @@ button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 
 /* Premium offer placement */
+.basic-offer-sec .compra-inner{max-width:600px}
+.basic-offer-sec .basic-plan{position:static;width:100%;max-width:none;margin:0}
+.plans-grid.plans-grid-single{grid-template-columns:minmax(0,1fr);max-width:680px;margin-left:auto;margin-right:auto}
 .premium-plan .urgencia-banner{padding:20px 14px;margin:0 0 24px;border:1px solid #ddbd7b40;border-radius:12px;background:#101923;scroll-margin-top:20px}
 .premium-plan .offer-kicker{font-size:11px;line-height:1.6;letter-spacing:.07em}
 .premium-plan .offer-title{font-size:22px;line-height:1.3}
